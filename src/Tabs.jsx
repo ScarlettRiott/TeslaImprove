@@ -1,33 +1,52 @@
-import React, { useState } from 'react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
 
-const Tabs = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const tabs = [
-    { path: '/about-the-team', label: 'About the Team' },
-    { path: '/environmental-impact', label: 'Environmental Impact' },
-    { path: '/revenue', label: 'Revenue' },
-    { path: '/cost-of-sales', label: 'Cost of Sales' },
-    { path: '/gross-profit', label: 'Gross Profit' },
-    { path: '/profit', label: 'Profit' },
-    { path: '/extra', label: 'Extra' }
-  ];
-
+function Tabs({ activeTab, setActiveTab }) {
   return (
     <div className="tab-container">
-      {tabs.map((tab, index) => (
-        <div
-          key={index}
-          className={`tab ${location.pathname === tab.path ? 'active' : ''}`}
-          onClick={() => navigate(tab.path)}
-        >
-          {tab.label}
-        </div>
-      ))}
+      <button
+        className={`tab ${activeTab === "about-the-team" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("about-the-team")}
+      >
+        About the Team
+      </button>
+      <button
+        className={`tab ${activeTab === "environmental-impact" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("environmental-impact")}
+      >
+        Environmental Impact
+      </button>
+      <button
+        className={`tab ${activeTab === "revenue" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("revenue")}
+      >
+        Revenue
+      </button>
+      <button
+        className={`tab ${activeTab === "cost-of-sales" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("cost-of-sales")}
+      >
+        Cost of Sales
+      </button>
+      <button
+        className={`tab ${activeTab === "gross-profit" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("gross-profit")}
+      >
+        Gross Profit
+      </button>
+      <button
+        className={`tab ${activeTab === "profit" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("profit")}
+      >
+        Profit
+      </button>
+      <button
+        className={`tab ${activeTab === "extra" ? "active-tab" : ""}`}
+        onClick={() => setActiveTab("extra")}
+      >
+        Extra
+      </button>
     </div>
   );
-};
+}
 
 export default Tabs;

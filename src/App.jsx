@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Tabs from './Tabs';
 import AboutTheTeam from './pages/AboutTheTeam';
 import EnvironmentalImpact from './pages/EnvironmentalImpact';
@@ -19,30 +19,20 @@ function Footer() {
 }
 
 function App() {
+  const [activeTab, setActiveTab] = useState("about-the-team");
+
   return (
     <div>
       <img src={TeslaLogo} className='center' alt="Tesla Logo" />
-      <Tabs />
-      <div id="about-the-team">
-        <AboutTheTeam />
-      </div>
-      <div id="environmental-impact">
-        <EnvironmentalImpact />
-      </div>
-      <div id="revenue">
-        <Revenue />
-      </div>
-      <div id="cost-of-sales">
-        <CostOfSales />
-      </div>
-      <div id="gross-profit">
-        <GrossProfit />
-      </div>
-      <div id="profit">
-        <Profit />
-      </div>
-      <div id="extra">
-        <Extra />
+      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div className="tab-content">
+        {activeTab === "about-the-team" && <AboutTheTeam />}
+        {activeTab === "environmental-impact" && <EnvironmentalImpact />}
+        {activeTab === "revenue" && <Revenue />}
+        {activeTab === "cost-of-sales" && <CostOfSales />}
+        {activeTab === "gross-profit" && <GrossProfit />}
+        {activeTab === "profit" && <Profit />}
+        {activeTab === "extra" && <Extra />}
       </div>
       <Footer />
     </div>
