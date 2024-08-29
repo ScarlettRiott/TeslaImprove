@@ -9,10 +9,12 @@ import GrossProfit from './pages/GrossProfit';
 import Profit from './pages/Profit';
 import Extra from './pages/Extra';
 import './index.css';
+import TeslaLogo from "./assets/Tesla_Motors.svg.png";
 
 function App() {
   return (
     <div>
+      <img src={TeslaLogo} className='center'></img>
       <Tabs />
       <Routes>
         <Route path="/about-the-team" element={<AboutTheTeam />} />

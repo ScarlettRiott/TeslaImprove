@@ -1,6 +1,7 @@
 // src/pages/CostOfSales.jsx
 import React from 'react';
 import '../index.css';
+import GrossProfitMargin from '../assets/Gross Profit Margin.jpg';
 
 const CostOfSales = () => {
   return (
@@ -80,7 +81,7 @@ const CostOfSales = () => {
         associated with repairing or replacing the recalled parts are typically
         absorbed by the company, which negatively impacting cost of sales.
       </p>
-      <img src="Gross Profit Margin.jpg" />
+      <img src={GrossProfitMargin} />
       <h2><u>Cost reduction strategies</u></h2>
       <p>
         In an attempt to reduce cost of production and improve the gross profit
