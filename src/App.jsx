@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Tabs from './Tabs';
 import AboutTheTeam from './pages/AboutTheTeam';
 import EnvironmentalImpact from './pages/EnvironmentalImpact';
@@ -27,13 +27,13 @@ function Footer() {
   );
 }
 
-
 function App() {
   return (
     <div>
       <img src={TeslaLogo} className='center' alt="Tesla Logo" />
       <Tabs />
       <Routes>
+        <Route path="/" element={<Navigate to="/about-the-team" />} />
         <Route path="/about-the-team" element={<AboutTheTeam />} />
         <Route path="/environmental-impact" element={<EnvironmentalImpact />} />
         <Route path="/revenue" element={<Revenue />} />
@@ -46,6 +46,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
