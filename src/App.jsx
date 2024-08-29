@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Tabs from './Tabs';
 import AboutTheTeam from './pages/AboutTheTeam';
 import EnvironmentalImpact from './pages/EnvironmentalImpact';
@@ -12,31 +13,39 @@ import TeslaLogo from "./assets/Tesla_Motors.svg.png";
 
 function Footer() {
   return (
-    <footer>
+    <footer
+      style={{
+        textAlign: "center",
+        padding: "10px 0",
+        backgroundColor: "#333",
+        color: "#fff",
+        marginTop: "20px",
+      }}
+    >
       <p>&copy; 2024 Tesla. All rights reserved.</p>
     </footer>
   );
 }
 
-function App() {
-  const [activeTab, setActiveTab] = useState("about-the-team");
 
+function App() {
   return (
     <div>
       <img src={TeslaLogo} className='center' alt="Tesla Logo" />
-      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="tab-content">
-        {activeTab === "about-the-team" && <AboutTheTeam />}
-        {activeTab === "environmental-impact" && <EnvironmentalImpact />}
-        {activeTab === "revenue" && <Revenue />}
-        {activeTab === "cost-of-sales" && <CostOfSales />}
-        {activeTab === "gross-profit" && <GrossProfit />}
-        {activeTab === "profit" && <Profit />}
-        {activeTab === "extra" && <Extra />}
-      </div>
+      <Tabs />
+      <Routes>
+        <Route path="/about-the-team" element={<AboutTheTeam />} />
+        <Route path="/environmental-impact" element={<EnvironmentalImpact />} />
+        <Route path="/revenue" element={<Revenue />} />
+        <Route path="/cost-of-sales" element={<CostOfSales />} />
+        <Route path="/gross-profit" element={<GrossProfit />} />
+        <Route path="/profit" element={<Profit />} />
+        <Route path="/extra" element={<Extra />} />
+      </Routes>
       <Footer />
     </div>
   );
 }
+
 
 export default App;
