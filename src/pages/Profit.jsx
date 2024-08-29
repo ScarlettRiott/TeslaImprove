@@ -51,6 +51,7 @@ const Profit = () => {
           <tr>
             <td>Y/Y Change</td>
             <td></td>
+            <td></td>
             <td style={{ color: 'red' }}>43.71%</td>
             <td style={{ color: 'green' }}>115.03%</td>
             <td style={{ color: 'red' }}>55.07%</td>
