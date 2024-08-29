@@ -48,12 +48,12 @@ const CostOfSales = () => {
         trend that aligns with the rising numbers of vehicles sold. In first
         quarter of the current financial year, cost of sales amounting to
         $17,605 million. This amount represents a decrease
-        <strong>of 15,07%</strong> from the previous quarter, and
-        <strong>6,45% decrease</strong>
+        <strong> of 15,07%</strong> from the previous quarter, and
+        <strong> 6,45% decrease</strong>
         compared to 2023’s first quarter. However, there was an
-        <strong>increase of 18,84%</strong>
+        <strong> increase of 18,84%</strong>
         in the second quarter, which is a
-        <strong>rise of 2.93%</strong> compared to the same period last year.
+        <strong> rise of 2.93%</strong> compared to the same period last year.
       </p>
       <p>
         <h2><strong>Factors Impacting Cost of Sales</strong></h2>
