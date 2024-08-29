@@ -11,10 +11,27 @@ import Extra from './pages/Extra';
 import './index.css';
 import TeslaLogo from "./assets/Tesla_Motors.svg.png";
 
+function Footer() {
+  return (
+    <footer
+      style={{
+        textAlign: "center",
+        padding: "10px 0",
+        backgroundColor: "#333",
+        color: "#fff",
+        marginTop: "20px",
+      }}
+    >
+      <p>&copy; 2024 Tesla. All rights reserved.</p>
+    </footer>
+  );
+}
+
+
 function App() {
   return (
     <div>
-      <img src={TeslaLogo} className='center'></img>
+      <img src={TeslaLogo} className='center' alt="Tesla Logo" />
       <Tabs />
       <Routes>
         <Route path="/about-the-team" element={<AboutTheTeam />} />
@@ -25,8 +42,10 @@ function App() {
         <Route path="/profit" element={<Profit />} />
         <Route path="/extra" element={<Extra />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
+
 
 export default App;
