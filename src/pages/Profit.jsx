@@ -2,7 +2,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import '../index.css';
-import NetIncomeBillion from "../assets/NetIncomeBillions.jpg"
+import NetIncomeBillion from "../assets/NetIncomeBillions.jpg";
+import NetIncomeMargin from "../assets/NetIncomeMargin.jpg"
 
 const Profit = () => {
   return (
@@ -70,7 +71,7 @@ const Profit = () => {
         stability but can fluctuate based on various factors, including changes
         in revenue, production costs, and market conditions.
       </p>
-      <img src="NetIncomeMargin.jpg" alt="Net Income Margin" />
+      <img src={NetIncomeMargin} alt="Net Income Margin" />
       <p>
       As we analyse the change in Net income from time to time, we are able to
         note a difference which appears in a way that indicates there’s
