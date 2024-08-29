@@ -16,7 +16,7 @@ const CostOfSales = () => {
         used.
       </p>
       <p><strong>Analysis</strong></p>
-      <table border="1" cellspacing="0" cellpadding="5">
+      <table border="1" cellSpacing="0" cellPadding="5">
         <thead>
           <tr>
             <th>Year</th>

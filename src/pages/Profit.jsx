@@ -14,7 +14,7 @@ const Profit = () => {
         statement. Tesla's approach to net income reflects a balance between
         aggressive growth strategies and achieving profitability.
       </p>
-      <table border="1" cellspacing="0" cellpadding="5">
+      <table border="1" cellSpacing="0" cellPadding="5">
         <thead>
           <tr>
             <th></th>

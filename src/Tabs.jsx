@@ -1,19 +1,32 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 
 const Tabs = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const tabs = [
+    { path: '/about-the-team', label: 'About the Team' },
+    { path: '/environmental-impact', label: 'Environmental Impact' },
+    { path: '/revenue', label: 'Revenue' },
+    { path: '/cost-of-sales', label: 'Cost of Sales' },
+    { path: '/gross-profit', label: 'Gross Profit' },
+    { path: '/profit', label: 'Profit' },
+    { path: '/extra', label: 'Extra' }
+  ];
+
   return (
-    <nav>
-      <ul>
-        <li><NavLink to="/about-the-team">About the Team</NavLink></li>
-        <li><NavLink to="/environmental-impact">Environmental Impact</NavLink></li>
-        <li><NavLink to="/revenue">Revenue</NavLink></li>
-        <li><NavLink to="/cost-of-sales">Cost of Sales</NavLink></li>
-        <li><NavLink to="/gross-profit">Gross Profit</NavLink></li>
-        <li><NavLink to="/profit">Profit</NavLink></li>
-        <li><NavLink to="/extra">Extra</NavLink></li>
-      </ul>
-    </nav>
+    <div className="tab-container">
+      {tabs.map((tab, index) => (
+        <div
+          key={index}
+          className={`tab ${location.pathname === tab.path ? 'active' : ''}`}
+          onClick={() => navigate(tab.path)}
+        >
+          {tab.label}
+        </div>
+      ))}
+    </div>
   );
 };
 
