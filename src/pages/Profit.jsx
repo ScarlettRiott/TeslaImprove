@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import '../index.css';
+import NetIncomeBillion from "../assets/NetIncomeBillions.jpg"
 
 const Profit = () => {
   return (
@@ -56,7 +57,7 @@ const Profit = () => {
           </tr>
         </tbody>
       </table>
-      <img src="NetIncomeBillions.jpg" alt="Net Income Billions" />
+      <img src={NetIncomeBillion} alt="Net Income Billions" />
       <p>
       Net profit margin is a key metric that reflects the company’s
         probability relative to its revenue. The net profit margin, calculated
