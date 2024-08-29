@@ -4,7 +4,7 @@ import '../index.css';
 
 const Extra = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <h1>Extras</h1>
       <h2>Financial Summary</h2>
       <img src="FinancialSummary.jpg" />

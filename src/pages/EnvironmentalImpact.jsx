@@ -4,7 +4,7 @@ import '../index.css';
 
 const EnvironmentalImpact = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <h1>Tesla's Environmental Impact</h1>
       <p>
         Tesla's environmental impact is complex and encompasses both positive

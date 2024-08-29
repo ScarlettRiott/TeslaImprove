@@ -4,7 +4,7 @@ import '../index.css';
 
 const Revenue = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <h1>REVENUE</h1>
       <p>
         Revenue is a crucial component of financial statements, as it reflects a

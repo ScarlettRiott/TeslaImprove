@@ -4,7 +4,7 @@ import '../index.css';
 
 const GrossProfit = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <p><strong>Analysing Tesla's Gross Profit:</strong></p>
       <p>
         Tesla’s Gross Profit is a critical measure of its financial health,

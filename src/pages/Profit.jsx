@@ -4,7 +4,7 @@ import '../index.css';
 
 const Profit = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <h2>NET INCOME(Profit)</h2>
       <p>
         Net income refers to the amount an individual or business makes after

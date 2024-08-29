@@ -4,7 +4,7 @@ import '../index.css';
 
 const CostOfSales = () => {
   return (
-    <div className="tab-content">
+    <div className="tab-content active-tab">
       <h1>Cost of Sales</h1>
       <p>
         Cost of sales, or cost of goods sold as stated in Tesla’s reports,
